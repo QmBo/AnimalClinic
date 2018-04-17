@@ -1,11 +1,6 @@
-public class Dog implements Pet {
-    private final String name;
+public class Dog extends Pet {
 
     public Dog(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return this.name;
+       super(name);
     }
 }

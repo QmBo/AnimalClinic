@@ -10,4 +10,9 @@ public class Client {
     public String getPetName() {
         return this.pet.getName();
     }
+
+    @Override
+    public String toString() {
+        return this.id + " " + this.pet.toString();
+    }
 }
