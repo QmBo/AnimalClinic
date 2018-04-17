@@ -11,6 +11,10 @@ public class Client {
         return this.pet.getName();
     }
 
+    public String getId() {
+        return this.id;
+    }
+
     @Override
     public String toString() {
         return this.id + " " + this.pet.toString();

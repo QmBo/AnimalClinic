@@ -8,5 +8,6 @@ public class ClinicTestInMain {
         clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
         System.out.println(Arrays.toString(clinic.allClients()));
         System.out.println(Arrays.toString(clinic.findClientForPetName("Мурка")));
+        System.out.println(Arrays.toString(clinic.findClientForOwnerId("Сидоров")));
     }
 }
