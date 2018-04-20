@@ -48,7 +48,7 @@ public class Clinic {
     }
 
     public Client showClient(final int position) {
-
+        return this.clients[position];
     }
 
     public void clientRename(final int position, final String id) {

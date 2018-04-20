@@ -52,7 +52,7 @@ public class ClinicTest {
         clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
         clinic.addClient(5, thisIsTwo);
         clinic.clientRename(1, "Петров Сергей");
-        assertThat(clinic.);
+        assertThat(clinic.showClient(1), is(thisIs));
     }
 
     @Test
@@ -64,5 +64,7 @@ public class ClinicTest {
         clinic.addClient(1, thisIs);
         clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
         clinic.addClient(5, thisIsTwo);
+        clinic.petRename(1, "Шарик Сергеевич");
+        assertThat(clinic.showClient(1), is(thisIs));
     }
 }
