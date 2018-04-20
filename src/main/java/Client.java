@@ -1,8 +1,8 @@
 public class Client {
-    private final String id;
+    private String id;
     private final Pet pet;
 
-    public Client(String id, Pet pet) {
+    public Client(final String id, final Pet pet) {
         this.id = id;
         this.pet = pet;
     }
@@ -18,5 +18,13 @@ public class Client {
     @Override
     public String toString() {
         return this.id + " " + this.pet.toString();
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setPet(final String name) {
+        this.pet.setName(name);
     }
 }

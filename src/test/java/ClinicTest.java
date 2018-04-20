@@ -41,4 +41,28 @@ public class ClinicTest {
         Client[] result = clinic.findClientForOwnerId("Петров");
         assertThat(result, is(new Client[]{thisIs, thisIsTwo}));
     }
+
+    @Test
+    public void clientRename() {
+        Clinic clinic = new Clinic(10);
+        Client thisIs = new Client("Петров", new Cat("Мурка"));
+        Client thisIsTwo = new Client("Петров", new Dog("Шапик"));
+        clinic.addClient(0, new Client("Иванов", new Dog("Бобик")));
+        clinic.addClient(1, thisIs);
+        clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
+        clinic.addClient(5, thisIsTwo);
+        clinic.clientRename(1, "Петров Сергей");
+        assertThat(clinic.);
+    }
+
+    @Test
+    public void petRename() {
+        Clinic clinic = new Clinic(10);
+        Client thisIs = new Client("Петров", new Cat("Мурка"));
+        Client thisIsTwo = new Client("Петров", new Dog("Шапик"));
+        clinic.addClient(0, new Client("Иванов", new Dog("Бобик")));
+        clinic.addClient(1, thisIs);
+        clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
+        clinic.addClient(5, thisIsTwo);
+    }
 }

@@ -47,4 +47,15 @@ public class Clinic {
         return this.clients;
     }
 
+    public Client showClient(final int position) {
+
+    }
+
+    public void clientRename(final int position, final String id) {
+        this.clients[position].setId(id);
+    }
+
+    public void petRename(final int position, final String name) {
+        this.clients[position].setPet(name);
+    }
 }
