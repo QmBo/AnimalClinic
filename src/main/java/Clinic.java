@@ -58,4 +58,16 @@ public class Clinic {
     public void petRename(final int position, final String name) {
         this.clients[position].setPet(name);
     }
+
+    public void removeClient(int position) {
+        this.clients[position] = null;
+    }
+
+    public void removePet(int position) {
+        this.clients[position].removePet();
+    }
+
+    public Pet getClientPet(int position) {
+        return this.clients[position].getPet();
+    }
 }

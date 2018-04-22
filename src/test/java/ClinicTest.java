@@ -67,4 +67,32 @@ public class ClinicTest {
         clinic.petRename(1, "Шарик Сергеевич");
         assertThat(clinic.showClient(1), is(thisIs));
     }
+
+
+    @Test
+    public void removeClient() {
+        Clinic clinic = new Clinic(10);
+        Client thisIs = new Client("Петров", new Cat("Мурка"));
+        Client thisIsTwo = new Client("Петров", new Dog("Шапик"));
+        clinic.addClient(0, new Client("Иванов", new Dog("Бобик")));
+        clinic.addClient(1, thisIs);
+        clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
+        clinic.addClient(5, thisIsTwo);
+        clinic.removeClient(1);
+        assertNotEquals(clinic.showClient(1), thisIs);
+    }
+
+    @Test
+    public void removePet() {
+        Clinic clinic = new Clinic(10);
+        Client thisIs = new Client("Петров", new Cat("Мурка"));
+        Client thisIsTwo = new Client("Петров", new Dog("Шапик"));
+        clinic.addClient(0, new Client("Иванов", new Dog("Бобик")));
+        clinic.addClient(1, thisIs);
+        clinic.addClient(2, new Client("Сидоров", new CatDog("Котопёс")));
+        clinic.addClient(5, thisIsTwo);
+        Pet result = clinic.getClientPet(1);
+        clinic.removePet(1);
+        assertNotEquals(clinic.getClientPet(1), result);
+    }
 }

@@ -9,5 +9,7 @@ public class ClinicTestInMain {
         System.out.println(Arrays.toString(clinic.allClients()));
         System.out.println(Arrays.toString(clinic.findClientForPetName("Мурка")));
         System.out.println(Arrays.toString(clinic.findClientForOwnerId("Сидоров")));
+        clinic.removeClient(1);
+        System.out.println(clinic.showClient(1));
     }
 }

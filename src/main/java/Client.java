@@ -1,6 +1,6 @@
 public class Client {
     private String id;
-    private final Pet pet;
+    private Pet pet;
 
     public Client(final String id, final Pet pet) {
         this.id = id;
@@ -26,5 +26,13 @@ public class Client {
 
     public void setPet(final String name) {
         this.pet.setName(name);
+    }
+
+    public void removePet() {
+        this.pet = null;
+    }
+
+    public Pet getPet() {
+        return this.pet;
     }
 }
