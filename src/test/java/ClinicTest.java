@@ -95,4 +95,19 @@ public class ClinicTest {
         clinic.removePet(1);
         assertNotEquals(clinic.getClientPet(1), result);
     }
+
+    @Test
+    public void allClients() {
+        Clinic clinic = new Clinic(4);
+        Client thisIs = new Client("Петров", new Cat("Мурка"));
+        Client thisIsTwo = new Client("Петров", new Dog("Шапик"));
+        Client thisIsThree = new Client("Иванов", new Dog("Бобик"));
+        Client thisIsFore = new Client("Сидоров", new CatDog("Котопёс"));
+        clinic.addClient(0, thisIs);
+        clinic.addClient(1, thisIsTwo);
+        clinic.addClient(2, thisIsThree);
+        clinic.addClient(3, thisIsFore);
+        Client[] result = clinic.allClients();
+        assertThat(result, is(new Client[]{thisIs, thisIsTwo, thisIsThree, thisIsFore}));
+    }
 }
